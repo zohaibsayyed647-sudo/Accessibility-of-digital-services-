@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Access | Accessibility Portal</title>
+
+<style>
+:root {
+  --primary: #1457d9;
+  --dark: #10213b;
+  --light: #f3f7ff;
+  --text: #26354a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: #f8faff;
+  line-height: 1.6;
+}
+header {
+  background: white;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: 0 2px 12px #10213b10;
+}
+.logo { font-size: 22px; font-weight: bold; color: var(--primary); }
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+}
+.hero {
+  padding: 65px 7%;
+  background: linear-gradient(130deg,#e4eeff,#f7f9ff);
+}
+.hero h1 {
+  color: var(--dark);
+  font-size: clamp(32px,5vw,48px);
+  line-height: 1.15;
+  max-width: 700px;
+}
+.hero p { max-width: 650px; font-size: 17px; }
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 19px;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+section { padding: 40px 7%; scroll-margin-top: 20px; }
+h2 { color: var(--dark); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+  gap: 18px;
+}
+.card {
+  background: white;
+  border: 1px solid #e3eafa;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #172b4d08;
+}
+.card h3 { margin-top: 5px; color: var(--dark); }
+.icon { font-size: 30px; }
+form {
+  background: white;
+  border: 1px solid #e3eafa;
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 750px;
+}
+label { display: block; font-weight: bold; margin-top: 16px; }
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #cbd6e8;
+  border-radius: 7px;
+  font: inherit;
+  background: white;
+}
+input[type="checkbox"] { width: auto; }
+.check { font-weight: normal; }
+.notice { color: #53647a; font-size: 13px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 15px;
+}
+.stat {
+  background: #eaf1ff;
+  padding: 20px;
+  border-radius: 12px;
+}
+.stat strong { font-size: 28px; color: var(--primary); display: block; }
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+footer a { color: white; }
+#message { font-weight: bold; margin-top: 12px; }
+button:focus, a:focus, input:focus, select:focus,
+textarea:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌐 Digital Access</div>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#survey">Survey</a>
+    <a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <p><strong>FIELD PROJECT • ACCESSIBILITY STUDY</strong></p>
+  <h1>Digital services should be accessible to everyone.</h1>
+  <p>
+    Explore how people access online services and help identify
+    barriers related to internet connectivity, devices, language,
+    affordability and digital literacy.
+  </p>
+  <a class="btn" href="#survey">Participate in Survey</a>
+</section>
+
+<section id="services">
+  <h2>Digital Services We Study</h2>
+  <p>Understand the services people use in their daily lives.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="icon" aria-hidden="true">🏦</div>
+      <h3>Digital Banking</h3>
+      <p>Online banking, money transfers and account services.</p>
+    </article>
+    <article class="card">
+      <div class="icon" aria-hidden="true">🎓</div>
+      <h3>Education</h3>
+      <p>Online classes, learning portals and digital study material.</p>
+    </article>
+    <article class="card">
+      <div class="icon" aria-hidden="true">🏥</div>
+      <h3>Healthcare</h3>
+      <p>Online appointments and access to health information.</p>
+    </article>
+    <article class="card">
+      <div class="icon" aria-hidden="true">🏛️</div>
+      <h3>Government Services</h3>
+      <p>Online forms, public information and service portals.</p>
+    </article>
+  </div>
+</section>
+
+<section id="barriers">
+  <h2>Common Accessibility Barriers</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>📶 Internet Access</h3>
+      <p>Slow, unreliable or unavailable internet connectivity.</p>
+    </article>
+    <article class="card">
+      <h3>📱 Device Availability</h3>
+      <p>Limited access to smartphones, computers or suitable devices.</p>
+    </article>
+    <article class="card">
+      <h3>🗣️ Language</h3>
+      <p>Difficulty understanding interfaces or instructions.</p>
+    </article>
+    <article class="card">
+      <h3>💡 Digital Literacy</h3>
+      <p>Difficulty using apps, websites and online forms.</p>
+    </article>
+  </div>
+</section>
+
+<section id="survey">
+  <h2>Accessibility Survey</h2>
+  <p>Submit a response to help with this field project.</p>
+
+  <form id="surveyForm">
+    <label for="age">Age group</label>
+    <select id="age" required>
+      <option value="">Select age group</option>
+      <option>Under 18</option>
+      <option>18–25</option>
+      <option>26–40</option>
+      <option>41–60</option>
+      <option>Above 60</option>
+    </select>
+
+    <label for="device">Main device used</label>
+    <select id="device" required>
+      <option value="">Select device</option>
+      <option>Smartphone</option>
+      <option>Laptop or computer</option>
+      <option>Tablet</option>
+      <option>Shared device</option>
+    </select>
+
+    <label for="internet">How would you rate your internet access?</label>
+    <select id="internet" required>
+      <option value="">Select an answer</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+      <option>No reliable access</option>
+    </select>
+
+    <label for="frequency">How often do you use digital services?</label>
+    <select id="frequency" required>
+      <option value="">Select frequency</option>
+      <option>Daily</option>
+      <option>Weekly</option>
+      <option>Monthly</option>
+      <option>Rarely</option>
+    </select>
+
+    <label for="barrier">What is your biggest difficulty?</label>
+    <select id="barrier" required>
+      <option value="">Select a barrier</option>
+      <option>Internet connectivity</option>
+      <option>Device or data cost</option>
+      <option>Language difficulty</option>
+      <option>Lack of digital knowledge</option>
+      <option>Technical errors</option>
+      <option>Accessibility due to disability</option>
+      <option>Other</option>
+      <option>No major difficulty</option>
+    </select>
+
+    <label for="rating">Overall ease of use (1 = difficult, 5 = easy)</label>
+    <select id="rating" required>
+      <option value="">Select rating</option>
+      <option value="1">1 - Very difficult</option>
+      <option value="2">2 - Difficult</option>
+      <option value="3">3 - Average</option>
+      <option value="4">4 - Easy</option>
+      <option value="5">5 - Very easy</option>
+    </select>
+
+    <label for="suggestion">Your suggestions (optional)</label>
+    <textarea id="suggestion" rows="3"
+      placeholder="How can digital services be improved?"></textarea>
+
+    <p class="notice">
+      Demo notice: responses are stored only in this browser on this device.
+      Do not enter sensitive personal information.
+    </p>
+
+    <button class="btn" type="submit">Submit Survey</button>
+    <p id="message" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section id="dashboard">
+  <h2>Survey Dashboard</h2>
+  <p>Summary of responses submitted in this browser.</p>
+  <div class="stats">
+    <div class="stat">Total responses<strong id="total">0</strong></div>
+    <div class="stat">Average ease rating<strong id="average">—</strong></div>
+    <div class="stat">Most reported barrier<strong id="topBarrier">—</strong></div>
+  </div>
+  <p class="notice">
+    This is a local demo dashboard, not a live multi-user database.
+    Only actual submitted responses are counted.
+  </p>
+  <button class="btn" type="button" id="exportBtn">Export CSV</button>
+</section>
+</main>
+
+<footer>
+  <p><strong>Digital Access</strong> — Accessibility of Digital Services Field Project</p>
+  <p>Educational project prototype. Not an official government service.</p>
+</footer>
+
+<script>
+const form = document.getElementById("surveyForm");
+const message = document.getElementById("message");
+const STORAGE_KEY = "digitalAccessSurveyResponses";
+
+function getResponses() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveResponses(responses) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(responses));
+}
+
+function refreshDashboard() {
+  const responses = getResponses();
+  document.getElementById("total").textContent = responses.length;
+
+  if (!responses.length) {
+    document.getElementById("average").textContent = "—";
+    document.getElementById("topBarrier").textContent = "—";
+    return;
+  }
+
+  const avg = responses.reduce((sum, r) => sum + Number(r.rating), 0)
+    / responses.length;
+  document.getElementById("average").textContent = avg.toFixed(1) + " / 5";
+
+  const counts = {};
+  responses.forEach(r => {
+    counts[r.barrier] = (counts[r.barrier] || 0) + 1;
+  });
+
+  const top = Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])[0];
+  document.getElementById("topBarrier").textContent = top[0];
+}
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const response = {
+    age: document.getElementById("age").value,
+    device: document.getElementById("device").value,
+    internet: document.getElementById("internet").value,
+    frequency: document.getElementById("frequency").value,
+    barrier: document.getElementById("barrier").value,
+    rating: document.getElementById("rating").value,
+    suggestion: document.getElementById("suggestion").value.trim(),
+    submittedAt: new Date().toISOString()
+  };
+
+  try {
+    const responses = getResponses();
+    responses.push(response);
+    saveResponses(responses);
+    form.reset();
+    message.textContent = "Thank you! Your response was saved on this device.";
+    refreshDashboard();
+  } catch {
+    message.textContent =
+      "Unable to save. Browser storage may be disabled or full.";
+  }
+});
+
+document.getElementById("exportBtn").addEventListener("click", function() {
+  const responses = getResponses();
+  if (!responses.length) {
+    alert("No survey responses to export yet.");
+    return;
+  }
+
+  const columns = [
+    "age", "device", "internet", "frequency",
+    "barrier", "rating", "suggestion", "submittedAt"
+  ];
+  const escapeCSV = value =>
+    '"' + String(value ?? "").replace(/"/g, '""') + '"';
+
+  const csv = [
+    columns.join(","),
+    ...responses.map(r => columns.map(c => escapeCSV(r[c])).join(","))
+  ].join("\r\n");
+
+  const blob = new Blob(["\uFEFF" + csv], {
+    type: "text/csv;charset=utf-8;"
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "digital-access-survey.csv";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+refreshDashboard();
+</script>
+
+</body>
+  </html>
